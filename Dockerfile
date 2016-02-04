@@ -2,7 +2,7 @@ FROM nginx:latest
 
 ENV CONSUL_URL consul:8500
 
-RUN rm -v /etc/nginx/conf.d/\*.conf
+RUN rm -v /etc/nginx/conf.d/*.conf
 
 COPY run.sh /
 COPY consul-template /usr/local/bin/
